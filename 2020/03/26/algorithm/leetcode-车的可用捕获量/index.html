@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>leetcode-整数反转 | 🔥烨烨🔥的个人博客</title>
+  <title>leetcode-车的可用捕获量 | 🔥烨烨🔥的个人博客</title>
   <meta name="keywords" content=" leetcode ">
-  <meta name="description" content="leetcode-整数反转 | 🔥烨烨🔥的个人博客">
+  <meta name="description" content="leetcode-车的可用捕获量 | 🔥烨烨🔥的个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="前言自从进入前端，一直想有一个自己的个人网站，但我又是一个要求比较纠结的人，我要求这个网站所有的东西都是自己做得，还能运用到各种前端知识，那么就得会服务端的功底，会一点设计，但是自己老是犯懒，拖延，所以这个愿望迟迟不能达成。突然有一天觉得这样不行，就像做项目一样，没有东西是一次性做成的，我可以先建个简单的博客，记录下自己的成长，等网站建成，再迁移过来。  本静态博客系统通过Hexo建成，托管在gi">
 <meta property="og:type" content="article">
@@ -910,9 +910,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-algorithm/leetcode-整数反转" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-algorithm/leetcode-车的可用捕获量" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">leetcode-整数反转</h1>
+        <h1 class="article-title">leetcode-车的可用捕获量</h1>
     
     <div class="article-meta">
         
@@ -934,7 +934,7 @@
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-02-03 10:24:24'>2019-10-10 20:06</time>
+        创建时间:<time class="date" title='更新时间: 2020-03-26 22:40:35'>2020-03-26 22:05</time>
         
     </div>
     <div class="article-meta">
@@ -967,7 +967,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的第一次解答"><span class="toc-text">我的第一次解答</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#说明"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#执行结果"><span class="toc-text">执行结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#我的最终解答"><span class="toc-text">我的最终解答</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#题目"><span class="toc-text">题目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#示例"><span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解题思路"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -983,59 +983,72 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</p>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><blockquote>
-<p>输入: 123<br>输出: 321</p>
-<p>输入: -123<br>输出: -321</p>
-<p>输入: 120<br>输出: 21</p>
-<p>假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2<strong>31,  2</strong>31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</p>
-</blockquote>
-<h2 id="我的第一次解答"><a href="#我的第一次解答" class="headerlink" title="我的第一次解答"></a>我的第一次解答</h2><pre><code class="javascript">
-/**
- * @param {number} x
- * @return {number}
- */
-var reverse = function(x) {
-  let y
-  const a = x
-  let t
-  const arr = Math.abs(x).toString().split(&#39;&#39;)
-  for(let i = 0; i&lt; Math.floor(arr.length/2); i++) {
-    t = arr[i]
-    arr[i] = arr[arr.length - i - 1]
-    arr[arr.length - i - 1] = t
-  }
-  y = a &gt; 0 ? Number(arr.join(&#39;&#39;)) : Number(-arr.join(&#39;&#39;))
-  if(y&gt;2**31-1 || y&lt;(-2)**31){
-    y = 0
-  }
-  return y
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>在一个 8 x 8 的棋盘上，有一个白色车（rook）。也可能有空方块，白色的象（bishop）和黑色的卒（pawn）。它们分别以字符 “R”，“.”，“B” 和 “p” 给出。大写字符表示白棋，小写字符表示黑棋。</p>
+<p>车按国际象棋中的规则移动：它选择四个基本方向中的一个（北，东，西和南），然后朝那个方向移动，直到它选择停止、到达棋盘的边缘或移动到同一方格来捕获该方格上颜色相反的卒。另外，车不能与其他友方（白色）象进入同一个方格。</p>
+<p>返回车能够在一次移动中捕获到的卒的数量。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="https://blog-images-1252854786.cos.ap-guangzhou.myqcloud.com/imgs/algorithm/%E8%BD%A6%E7%9A%84%E5%8F%AF%E7%94%A8%E6%8D%95%E8%8E%B7%E9%87%8F1" alt="车的可用捕获量"><br>输入：[[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”p”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”R”,”.”,”.”,”.”,”p”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”p”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”]]<br>输出：3<br>解释：<br>在本例中，车能够捕获所有的卒。</p>
+<p><img src="https://blog-images-1252854786.cos.ap-guangzhou.myqcloud.com/imgs/algorithm/%E8%BD%A6%E7%9A%84%E6%8D%95%E8%8E%B7%E9%87%8F2" alt=""><br>输入：[[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”p”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”p”,”.”,”.”,”.”,”.”],[“p”,”p”,”.”,”R”,”.”,”p”,”B”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”B”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”p”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”]]<br>输出：3<br>解释：<br>车可以捕获位置 b5，d6 和 f5 的卒。</p>
+<p><img src="https://blog-images-1252854786.cos.ap-guangzhou.myqcloud.com/imgs/algorithm/%E8%BD%A6%E7%9A%84%E6%8D%95%E8%8E%B7%E9%87%8F3" alt=""></p>
+<p>输入：[[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”p”,”p”,”p”,”p”,”p”,”.”,”.”],[“.”,”p”,”p”,”B”,”p”,”p”,”.”,”.”],[“.”,”p”,”B”,”R”,”B”,”p”,”.”,”.”],[“.”,”p”,”p”,”B”,”p”,”p”,”.”,”.”],[“.”,”p”,”p”,”p”,”p”,”p”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”],[“.”,”.”,”.”,”.”,”.”,”.”,”.”,”.”]]<br>输出：0<br>解释：<br>象阻止了车捕获任何卒。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
+<li><p>首先肯定要找到存在R的数组，然后让这个坐标像前后左右走，遇到p就加1并结束循环<br>遇到B也结束循环</p>
+</li>
+<li><p>找到这个R的坐标，现在有R的数组中找到可以直接到p的，然后在其他数组中找到相同下边的值做成一个数组，继续找p</p>
+</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code class="js">var numRookCaptures = function(board) {
+    let result = 0
+    let R = []
+    let width = board[0].length
+    let height = board.length
+    for(let i = 0; i &lt; height; i++) {
+        for(let j = 0; j&lt; width; j++){
+            if(board[i][j] === &#39;R&#39;) {
+                R = [i, j] 
+            }
+        }
+    }
+    console.log(R)
+    // 然后向四个方向走
+    for(let j = R[1]; j&lt; width; j++){
+        if(board[R[0]][j] === &#39;B&#39;) {
+            break
+        }
+        if(board[R[0]][j] === &#39;p&#39;) {
+            result += 1
+            break
+        }
+    }
+    for(let j = R[1]; j&gt; -1; j--){
+        if(board[R[0]][j] === &#39;B&#39;) {
+            break
+        }
+        if(board[R[0]][j] === &#39;p&#39;) {
+            result += 1
+            break
+        }
+    }
+    for(let j = R[0]; j&lt; height; j++){
+        if(board[j][R[1]] === &#39;B&#39;) {
+            break
+        }
+        if(board[j][R[1]] === &#39;p&#39;) {
+            result += 1
+            break
+        }
+    }
+    for(let j = R[0]; j&gt; -1; j--){
+        if(board[j][R[1]] === &#39;B&#39;) {
+            break
+        }
+        if(board[j][R[1]] === &#39;p&#39;) {
+            result += 1
+            break
+        }
+    }
+    return result
 };
 </code></pre>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>可以看到上面的解答完全就是在硬怼，没有考虑过什么复杂度。所以当然是不能通过的，刚好卡在“超出输出限制”这条，就是因为双层循环完全是在浪费性能！</p>
-<p>我们可以只用一层循环，降低时间复杂度，，求出差值，然后去找剩余元素是否有这个差值就可以了。</p>
-<h2 id="执行结果"><a href="#执行结果" class="headerlink" title="执行结果"></a>执行结果</h2><blockquote>
-<p>执行用时 :84  ms, 在所有 JavaScript 提交中击败了98.54%的用户<br>内存消耗 :35.8 MB, 在所有 JavaScript 提交中击败了44.72%%的用户</p>
-</blockquote>
-<p>整体还好，但是这种转为字符串再转为数值的思维可以转变一下</p>
-<h2 id="我的最终解答"><a href="#我的最终解答" class="headerlink" title="我的最终解答"></a>我的最终解答</h2><pre><code class="javascript">/**
- * @param {number} x
- * @return {number}
- */
-var reverse = function(x) {
-  let rev = 0
-  while(x !== 0){
-    rev = rev * 10 + x % 10;
-    if(rev &gt; 2**31 - 1 || rev &lt; (-2)**31){
-      return 0
-    }
-    x = Math.trunc(x/10)
-  }
-  return rev
-};</code></pre>
-<blockquote>
-<p>执行用时 :80  ms, 在所有 JavaScript 提交中击败了99.33%的用户<br>内存消耗 :35.4 MB, 在所有 JavaScript 提交中击败了89.49%的用户</p>
-</blockquote>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 395340017@qq.com </span>
@@ -1049,12 +1062,12 @@ var reverse = function(x) {
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>leetcode-整数反转</p>
+    <p><span class="copy-title">文章标题:</span>leetcode-车的可用捕获量</p>
     
     <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="🔥烨烨🔥">🔥烨烨🔥</a></p>
-    <p><span class="copy-title">发布时间:</span>2019-10-10, 20:06:51</p>
-    <p><span class="copy-title">最后更新:</span>2020-02-03, 10:24:24</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2019/10/10/algorithm/leetcode-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/" title="leetcode-整数反转">http://www.jiayechao.com/2019/10/10/algorithm/leetcode-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/</a>
+    <p><span class="copy-title">发布时间:</span>2020-03-26, 22:05:56</p>
+    <p><span class="copy-title">最后更新:</span>2020-03-26, 22:40:35</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/03/26/algorithm/leetcode-%E8%BD%A6%E7%9A%84%E5%8F%AF%E7%94%A8%E6%8D%95%E8%8E%B7%E9%87%8F/" title="leetcode-车的可用捕获量">http://www.jiayechao.com/2020/03/26/algorithm/leetcode-%E8%BD%A6%E7%9A%84%E5%8F%AF%E7%94%A8%E6%8D%95%E8%8E%B7%E9%87%8F/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
