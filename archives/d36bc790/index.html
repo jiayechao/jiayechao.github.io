@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>写给vuer的react项目搭建指南 | 🔥烨烨🔥的个人博客</title>
+  <meta name="keywords" content=" react ">
+  <meta name="description" content="写给vuer的react项目搭建指南 | 🔥烨烨🔥的个人博客">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="记录平时的一些想法，学习、读书笔记">
+<meta property="og:type" content="website">
+<meta property="og:title" content="🔥烨烨🔥的个人博客">
+<meta property="og:url" content="http://www.jiayechao.com/archives/index.html">
+<meta property="og:site_name" content="🔥烨烨🔥的个人博客">
+<meta property="og:description" content="记录平时的一些想法，学习、读书笔记">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="🔥烨烨🔥">
+<meta property="article:tag" content="jiayehcao yeye 🔥烨烨🔥 贾烨超">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/atom-light.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="true">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>🔥烨烨🔥</span>
+</div>
+
+<div class="icon">
+    
+        
+    
+        
+        <a title="github" href="https://github.com/jiayechao" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+        <a title="email" href="mailto:395340017@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=395340017&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+    
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(68)</small></div></li>
+    
+        
+            
+            <li><div data-rel="算法">算法<small>(28)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="前端框架">前端框架<small>(5)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="健身">健身<small>(2)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="随想">随想<small>(4)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="前端基础"><i class="fold iconfont icon-right"></i>前端基础<small>(16)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="浏览器">浏览器<small>(1)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="项目经验"><i class="fold iconfont icon-right"></i>项目经验<small>(6)</small></div>
+                
+                    <ul class="sub hide">
+                        
+                        <li><div data-rel="工具">工具<small>(3)</small></div>
+                            
+                        </li>
+                            
+                    </ul>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="面试">面试<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="wiki">wiki<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="webpack">webpack<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+        
+    
+        
+            
+            <li><div data-rel="node">node<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+        
+            
+            <li><div data-rel="translate">translate<small>(1)</small></div>
+                
+            </li>
+            
+        
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="68">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode==13){return false;}">
+        <input class="search" type="text" placeholder="Search..." autocomplete="off"id="local-search-input" >
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">leetcode</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vue</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">vuepress</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">node</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">nestjs</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">grapgql</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">健身</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">面试题</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">mind</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">css3</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">scoped</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">饿了么</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">hexo</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">模块</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">闭包</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">递归</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">面试</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">label</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">双层循环</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">工具</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">input兼容</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">input遮挡</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">position</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">事件循环</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">eventloop</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color1">react</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">正则</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color2">RegExp</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">wiki</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">webpack</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">兼容</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">重绘</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">重排</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">小技巧</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">对象</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color3">继承</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">animation</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">项目经验</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">微前端</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">数据结构</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color4">npm</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a href="javascript:" class="color5">js引擎</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class="算法 "
+           href="/archives/ad39b066/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-加一">leetcode-加一</span>
+            <span class="post-date" title="2019-11-05 10:36:29">2019/11/05</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/5e0925db/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-二进制求和">leetcode-二进制求和</span>
+            <span class="post-date" title="2019-11-06 15:08:13">2019/11/06</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/c38fb42c/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-删除排序数组中的重复项">leetcode-删除排序数组中的重复项</span>
+            <span class="post-date" title="2019-10-05 20:06:51">2019/10/05</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/c598bce0/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-x的平方根">leetcode-x的平方根</span>
+            <span class="post-date" title="2019-11-07 09:53:06">2019/11/07</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/878fef60/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-两数之和">leetcode-两数之和</span>
+            <span class="post-date" title="2019-10-03 20:06:51">2019/10/03</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/5c8d5b57/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-实现 strStr()">leetcode-实现 strStr()</span>
+            <span class="post-date" title="2019-10-06 20:06:51">2019/10/06</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/5d485a74/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-搜索插入位置">leetcode-搜索插入位置</span>
+            <span class="post-date" title="2019-10-07 20:06:51">2019/10/07</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/8440ce31/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-回文数">leetcode-回文数</span>
+            <span class="post-date" title="2019-10-02 20:06:51">2019/10/02</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/e0ee786e/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-整数反转">leetcode-整数反转</span>
+            <span class="post-date" title="2019-10-10 20:06:51">2019/10/10</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/19048cd7/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-报数">leetcode-报数</span>
+            <span class="post-date" title="2019-10-01 20:06:51">2019/10/01</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/26f1c5fe/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-最大子序和">leetcode-最大子序和</span>
+            <span class="post-date" title="2019-10-11 20:06:51">2019/10/11</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/edcce943/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-最长公共前缀">leetcode-最长公共前缀</span>
+            <span class="post-date" title="2019-10-12 20:06:51">2019/10/12</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/7f062647/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-最后一个单词的长度">leetcode-最后一个单词的长度</span>
+            <span class="post-date" title="2019-10-31 10:06:51">2019/10/31</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/c0b61181/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-有效数字">leetcode-有效数字</span>
+            <span class="post-date" title="2019-11-04 14:36:51">2019/11/04</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/bbda7433/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-爬楼梯">leetcode-爬楼梯</span>
+            <span class="post-date" title="2019-11-08 14:50:35">2019/11/08</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/e65b715e/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-罗马数字转整数">leetcode-罗马数字转整数</span>
+            <span class="post-date" title="2019-10-04 20:06:51">2019/10/04</span>
+        </a>
+        
+        <a  class="前端框架 "
+           href="/archives/a6e9523a/"
+           data-tag="vue,vuepress"
+           data-author="" >
+            <span class="post-title" title="基于vuepress搭建个人博客">基于vuepress搭建个人博客</span>
+            <span class="post-date" title="2019-08-15 20:06:51">2019/08/15</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/988620df/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-移除元素">leetcode-移除元素</span>
+            <span class="post-date" title="2019-10-08 20:06:51">2019/10/08</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/55127d28/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-有效的括号">leetcode-有效的括号</span>
+            <span class="post-date" title="2019-10-09 20:06:51">2019/10/09</span>
+        </a>
+        
+        <a  class="前端框架 "
+           href="/archives/d800e352/"
+           data-tag="node,nestjs,grapgql"
+           data-author="" >
+            <span class="post-title" title="nestjs+graphQL的初步尝试及指南">nestjs+graphQL的初步尝试及指南</span>
+            <span class="post-date" title="2019-08-15 20:06:51">2019/08/15</span>
+        </a>
+        
+        <a  class="健身 "
+           href="/archives/1e90eb7/"
+           data-tag="健身"
+           data-author="" >
+            <span class="post-title" title="你需要多少热量">你需要多少热量</span>
+            <span class="post-date" title="2019-09-02 20:06:51">2019/09/02</span>
+        </a>
+        
+        <a  class=""
+           href="/archives/45622/"
+           data-tag=""
+           data-author="" >
+            <span class="post-title" title="algorithm/test">algorithm/test</span>
+            <span class="post-date" title="2020-03-26 23:12:33">2020/03/26</span>
+        </a>
+        
+        <a  class="健身 "
+           href="/archives/e1ba4cd8/"
+           data-tag="健身"
+           data-author="" >
+            <span class="post-title" title="力量举践行赛">力量举践行赛</span>
+            <span class="post-date" title="2019-10-02 20:06:51">2019/10/02</span>
+        </a>
+        
+        <a  class="随想 "
+           href="/archives/b7f3ad9b/"
+           data-tag="面试题"
+           data-author="" >
+            <span class="post-title" title="面试题整理">面试题整理</span>
+            <span class="post-date" title="2020-01-19 15:56:20">2020/01/19</span>
+        </a>
+        
+        <a  class="随想 "
+           href="/archives/ce26a1fe/"
+           data-tag="mind"
+           data-author="" >
+            <span class="post-title" title="七年之后我在做什么">七年之后我在做什么</span>
+            <span class="post-date" title="2018-08-14 20:06:51">2018/08/14</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/2e992ba2/"
+           data-tag="css3"
+           data-author="" >
+            <span class="post-title" title="css-3D那点事">css-3D那点事</span>
+            <span class="post-date" title="2016-08-16 17:20:26">2016/08/16</span>
+        </a>
+        
+        <a  class="随想 "
+           href="/archives/b69479c6/"
+           data-tag="mind"
+           data-author="" >
+            <span class="post-title" title="我的知识技能分析">我的知识技能分析</span>
+            <span class="post-date" title="2019-08-14 20:06:51">2019/08/14</span>
+        </a>
+        
+        <a  class=""
+           href="/archives/2a2f9047/"
+           data-tag="css3,scoped,饿了么"
+           data-author="" >
+            <span class="post-title" title="css属性scoped">css属性scoped</span>
+            <span class="post-date" title="2017-05-17 15:26:05">2017/05/17</span>
+        </a>
+        
+        <a  class="项目经验 工具 "
+           href="/archives/32b5d447/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo博客实用功能">hexo博客实用功能</span>
+            <span class="post-date" title="2016-08-14 15:50:45">2016/08/14</span>
+        </a>
+        
+        <a  class="随想 "
+           href="/archives/cd54f29f/"
+           data-tag="mind"
+           data-author="" >
+            <span class="post-title" title="假装面试自问自答-2019">假装面试自问自答-2019</span>
+            <span class="post-date" title="2019-12-19 11:25:54">2019/12/19</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/18e4f619/"
+           data-tag="模块"
+           data-author="" >
+            <span class="post-title" title="JavaScript模块风格极简小记">JavaScript模块风格极简小记</span>
+            <span class="post-date" title="2018-05-15 23:10:46">2018/05/15</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/af3c92a0/"
+           data-tag="闭包,递归"
+           data-author="" >
+            <span class="post-title" title="javascript中的闭包">javascript中的闭包</span>
+            <span class="post-date" title="2016-10-26 11:33:34">2016/10/26</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/7d564a78/"
+           data-tag="模块"
+           data-author="" >
+            <span class="post-title" title="javascript的模块模式">javascript的模块模式</span>
+            <span class="post-date" title="2016-10-27 14:33:29">2016/10/27</span>
+        </a>
+        
+        <a  class="面试 "
+           href="/archives/c8a78411/"
+           data-tag="面试"
+           data-author="" >
+            <span class="post-title" title="公司面试题-初版">公司面试题-初版</span>
+            <span class="post-date" title="2018-12-07 21:26:15">2018/12/07</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/c5316392/"
+           data-tag="label,双层循环"
+           data-author="" >
+            <span class="post-title" title="javascript中的label语句">javascript中的label语句</span>
+            <span class="post-date" title="2016-08-24 08:57:50">2016/08/24</span>
+        </a>
+        
+        <a  class="项目经验 工具 "
+           href="/archives/9bdeb9c6/"
+           data-tag="工具"
+           data-author="" >
+            <span class="post-title" title="一个简单实用的小函数-操作transform">一个简单实用的小函数-操作transform</span>
+            <span class="post-date" title="2016-10-31 16:42:35">2016/10/31</span>
+        </a>
+        
+        <a  class="项目经验 "
+           href="/archives/bd7367c6/"
+           data-tag="input兼容,input遮挡"
+           data-author="" >
+            <span class="post-title" title="input在移动端的表现">input在移动端的表现</span>
+            <span class="post-date" title="2017-12-07 21:26:15">2017/12/07</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/e00ef5f9/"
+           data-tag="position"
+           data-author="" >
+            <span class="post-title" title="屏幕尺寸及定位的应用">屏幕尺寸及定位的应用</span>
+            <span class="post-date" title="2016-08-11 17:57:59">2016/08/11</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/76584626/"
+           data-tag="事件循环,eventloop"
+           data-author="" >
+            <span class="post-title" title="事件循环之我见">事件循环之我见</span>
+            <span class="post-date" title="2020-01-19 17:22:01">2020/01/19</span>
+        </a>
+        
+        <a  class="前端框架 "
+           href="/archives/d36bc790/"
+           data-tag="react"
+           data-author="" >
+            <span class="post-title" title="写给vuer的react项目搭建指南">写给vuer的react项目搭建指南</span>
+            <span class="post-date" title="2019-09-02 10:32:30">2019/09/02</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/d08a6aab/"
+           data-tag="正则,RegExp"
+           data-author="" >
+            <span class="post-title" title="正则表达式的使用">正则表达式的使用</span>
+            <span class="post-date" title="2019-10-29 11:06:34">2019/10/29</span>
+        </a>
+        
+        <a  class="前端框架 "
+           href="/archives/c2fa2936/"
+           data-tag="vue,react"
+           data-author="" >
+            <span class="post-title" title="我认识的react和vue">我认识的react和vue</span>
+            <span class="post-date" title="2020-01-21 10:20:46">2020/01/21</span>
+        </a>
+        
+        <a  class="wiki "
+           href="/archives/145831b2/"
+           data-tag="wiki"
+           data-author="" >
+            <span class="post-title" title="WIKI">WIKI</span>
+            <span class="post-date" title="2018-08-14 20:06:51">2018/08/14</span>
+        </a>
+        
+        <a  class="webpack "
+           href="/archives/c61d876b/"
+           data-tag="webpack"
+           data-author="" >
+            <span class="post-title" title="webpack初级入门">webpack初级入门</span>
+            <span class="post-date" title="2016-08-14 20:06:51">2016/08/14</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/1744947e/"
+           data-tag="position,兼容"
+           data-author="" >
+            <span class="post-title" title="说说position和overflow在低版本IE下的兼容">说说position和overflow在低版本IE下的兼容</span>
+            <span class="post-date" title="2016-08-12 09:13:29">2016/08/12</span>
+        </a>
+        
+        <a  class="前端基础 浏览器 "
+           href="/archives/1921ff2d/"
+           data-tag="重绘,重排"
+           data-author="" >
+            <span class="post-title" title="浏览器的重绘与重排.md">浏览器的重绘与重排.md</span>
+            <span class="post-date" title="2019-10-31 17:14:53">2019/10/31</span>
+        </a>
+        
+        <a  class="项目经验 "
+           href="/archives/610da26e/"
+           data-tag="小技巧"
+           data-author="" >
+            <span class="post-title" title="输入框禁止输入中文">输入框禁止输入中文</span>
+            <span class="post-date" title="2016-09-28 15:20:18">2016/09/28</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/8ccc1568/"
+           data-tag="对象"
+           data-author="" >
+            <span class="post-title" title="面向对象的程序设计——理解对象">面向对象的程序设计——理解对象</span>
+            <span class="post-date" title="2016-10-08 11:43:39">2016/10/08</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/5e4e8cc3/"
+           data-tag="对象"
+           data-author="" >
+            <span class="post-title" title="面向对象的程序设计--创建对象（下）">面向对象的程序设计--创建对象（下）</span>
+            <span class="post-date" title="2016-10-14 14:47:56">2016/10/14</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/94b80eb5/"
+           data-tag="对象,继承"
+           data-author="" >
+            <span class="post-title" title="面向对象的程序设计--继承（上）">面向对象的程序设计--继承（上）</span>
+            <span class="post-date" title="2016-10-17 15:55:53">2016/10/17</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/2c0469d0/"
+           data-tag="对象,继承"
+           data-author="" >
+            <span class="post-title" title="面向对象的程序设计--继承（下）">面向对象的程序设计--继承（下）</span>
+            <span class="post-date" title="2016-10-18 09:09:53">2016/10/18</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/5d8946bb/"
+           data-tag="css3,animation"
+           data-author="" >
+            <span class="post-title" title="css-动画模块属性探讨">css-动画模块属性探讨</span>
+            <span class="post-date" title="2016-08-18 15:09:56">2016/08/18</span>
+        </a>
+        
+        <a  class="项目经验 工具 "
+           href="/archives/523c210c/"
+           data-tag="hexo"
+           data-author="" >
+            <span class="post-title" title="hexo搭建博客系统">hexo搭建博客系统</span>
+            <span class="post-date" title="2020-02-03 10:24:24">2020/02/03</span>
+        </a>
+        
+        <a  class="项目经验 "
+           href="/archives/8e24ca/"
+           data-tag="项目经验"
+           data-author="" >
+            <span class="post-title" title="新网站项目中的教训">新网站项目中的教训</span>
+            <span class="post-date" title="2016-08-10 09:35:44">2016/08/10</span>
+        </a>
+        
+        <a  class="前端基础 "
+           href="/archives/e6f2eba6/"
+           data-tag="对象"
+           data-author="" >
+            <span class="post-title" title="面向对象的程序设计--创建对象（上）">面向对象的程序设计--创建对象（上）</span>
+            <span class="post-date" title="2016-10-10 16:23:26">2016/10/10</span>
+        </a>
+        
+        <a  class="前端框架 "
+           href="/archives/8ff456bc/"
+           data-tag="微前端"
+           data-author="" >
+            <span class="post-title" title="微前端如何在公司落地">微前端如何在公司落地</span>
+            <span class="post-date" title="2019-12-19 12:04:09">2019/12/19</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/58297/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-车的可用捕获量">leetcode-车的可用捕获量</span>
+            <span class="post-date" title="2020-03-26 22:05:56">2020/03/26</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/f5ed5cef/"
+           data-tag="数据结构"
+           data-author="" >
+            <span class="post-title" title="javascript数据结构">javascript数据结构</span>
+            <span class="post-date" title="2020-02-27 12:28:55">2020/02/27</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/3d2c6700/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-三数之和">leetcode-三数之和</span>
+            <span class="post-date" title="2020-03-25 15:48:51">2020/03/25</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/5647d2ec/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-多数元素">leetcode-多数元素</span>
+            <span class="post-date" title="2020-03-13 10:46:07">2020/03/13</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/46778f77/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="二叉树的直径">二叉树的直径</span>
+            <span class="post-date" title="2020-03-10 11:11:48">2020/03/10</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/77d8015b/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-最小的K个数">leetcode-最小的K个数</span>
+            <span class="post-date" title="2020-03-09 10:31:57">2020/03/09</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/41c80e68/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="字符串的最大公因子">字符串的最大公因子</span>
+            <span class="post-date" title="2020-03-12 15:24:18">2020/03/12</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/77d8015b/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-股票买卖的最佳时机">leetcode-股票买卖的最佳时机</span>
+            <span class="post-date" title="2020-03-09 10:31:57">2020/03/09</span>
+        </a>
+        
+        <a  class="node "
+           href="/archives/8e16a359/"
+           data-tag="node,npm"
+           data-author="" >
+            <span class="post-title" title="node开发中常用的基本模块">node开发中常用的基本模块</span>
+            <span class="post-date" title="2020-03-18 13:20:02">2020/03/18</span>
+        </a>
+        
+        <a  class="translate "
+           href="/archives/5e9ee2de/"
+           data-tag="js引擎"
+           data-author="" >
+            <span class="post-title" title="关于JavaScript的提升，作用域，封装的终极指南">关于JavaScript的提升，作用域，封装的终极指南</span>
+            <span class="post-date" title="2020-03-20 16:44:49">2020/03/20</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/f3ac2a32/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="将数组分成和相等的三个部分">将数组分成和相等的三个部分</span>
+            <span class="post-date" title="2020-03-11 16:40:38">2020/03/11</span>
+        </a>
+        
+        <a  class="算法 "
+           href="/archives/7f666bdb/"
+           data-tag="leetcode"
+           data-author="" >
+            <span class="post-title" title="leetcode-相交链表">leetcode-相交链表</span>
+            <span class="post-date" title="2020-03-19 09:51:48">2020/03/19</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-frontend/写给vuer的react项目指南" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">写给vuer的react项目搭建指南</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            
+                <a href="javascript:" data-rel="前端框架">前端框架</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="javascript:" class="color1">react</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-02-03 10:24:24'>2019-09-02 10:32</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+        <span class="top-comment" title="跳转至评论区">
+            <a href="#comments">
+                评论:<span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </a>
+        </span>
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#为什么"><span class="toc-text">为什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境变量"><span class="toc-text">环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码分割"><span class="toc-text">代码分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ant-design按需加载"><span class="toc-text">ant-design按需加载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代理"><span class="toc-text">代理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#路由守卫和编程式导航"><span class="toc-text">路由守卫和编程式导航</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#withRouter"><span class="toc-text">withRouter</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#路由守卫"><span class="toc-text">路由守卫</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编程式导航"><span class="toc-text">编程式导航</span></a></li></ol></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><p>我为什么要写这个简单教程？</p>
+<p>我所在公司一直是vue技术栈，最近在做市场调研的时候发现，很多公司都要求react技术栈。众所周知，react的上手难度还是比较高，但是，它的难度并不在业务代码本身，而在于项目搭建过程中的各种插件配置。</p>
+<p>vue是一个渐进式框架，意味着他是随着你的项目逐渐丰富的，很多时候可能只需要用到很少的功能就可以完成项目。但是react不一样，如果你想搭建一个react项目，很多东西需要你自己动手，装包，装插件，想想路由鉴权，状态管理，环境变量等等各种操作，在vue-cli我们只需要跟着良好的文档做，几乎不会出错。但是react的糟糕的英文文档和排版很难让人快速找到需要的功能。</p>
+<p>我写这个简单教程的目的就在此，你可以快速以此搭建自己的项目，达到快速入门，不用再纠缠于各种散乱的文档。</p>
+<p>ps: 假定你已经能熟练使用vue-cli</p>
+<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>项目中我们常常需要在不同环境设置不同的变量，在vue-cli和create-react-app中有默认三个模式<code>.env, .env.development, .env.test, .env.production</code><br>,可以直接创建文件后使用。</p>
+<p>如果需要另外的自定义模式，在vue-cli中，我们直接创建<code>.env.[mode]</code>文件，设置键值对，然后配置script启动项<code>--mode [mode]</code>即可将键值对挂在到<code>process.env</code>上，很方便的功能。</p>
+<p>但是在react中我们需要自己动手。</p>
+<ol>
+<li>我们创建一个<code>.env.[mode]</code>文件，写入所需要的环境变量</li>
+<li>安装<code>npm install env-cmd --save</code></li>
+<li>配置启动项，<code>build:[mode]&quot;: &quot;env-cmd -f .env.[mode] npm run build</code></li>
+</ol>
+<p>这样我们就会将环境变量挂在到<code>process.env</code></p>
+<p>需要注意的是，除了关键的一些键值，其他自定义的需要以REACT_APP_开头。</p>
+<p>react的环境变量文件<code>.env</code>还可以对项目进行一些高级配置，比如是否启用自定义eslint，图片压缩的大小等等，具体请查看<a href="https://create-react-app.dev/docs/advanced-configuration" target="_blank" rel="noopener">文档</a></p>
+<h2 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h2><p>最新的react已经内置了<a href="https://zh-hans.reactjs.org/docs/code-splitting.html#reactlazy" target="_blank" rel="noopener">懒加载方案</a>，但目前不支持服务端渲染。如果需要服务端渲染，可以查看<a href="https://github.com/smooth-code/loadable-components" target="_blank" rel="noopener">loadable-components</a>这个库</p>
+<h2 id="ant-design按需加载"><a href="#ant-design按需加载" class="headerlink" title="ant-design按需加载"></a>ant-design按需加载</h2><p>为了使用ant-design的按需加载，我们按照<a href="https://ant.design/docs/react/use-with-create-react-app-cn" target="_blank" rel="noopener">官网教程</a>改造项目</p>
+<h2 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h2><p>create-react-app的代理,只需要在<code>package.json</code>中新增一个属性：<code>&quot;proxy&quot;: &quot;http://localhost:4000&quot;</code>，即可代理到<code>http://localhost:4000</code></p>
+<p>你也可以手动配置自己的代理，分以下步骤：</p>
+<ol>
+<li><p><code>yarn add http-proxy-middleware</code></p>
+</li>
+<li><p>创建<code>src/setupProxy.js</code>,并写入</p>
+<pre><code class="javascript"> const proxy = require(&#39;http-proxy-middleware&#39;);
+
+ module.exports = function(app) {
+   app.use(proxy(&#39;/api&#39;, { target: &#39;http://localhost:5000/&#39; }));
+ };</code></pre>
+</li>
+<li><p>具体配置可参考<a href="http://npm.taobao.org/package/http-proxy-middleware" target="_blank" rel="noopener">http-proxy-middleware</a></p>
+</li>
+</ol>
+<h2 id="路由守卫和编程式导航"><a href="#路由守卫和编程式导航" class="headerlink" title="路由守卫和编程式导航"></a>路由守卫和编程式导航</h2><p>从reac-router4.0版本开始去掉了守卫功能，但这个功能我们是需要的，那么如何做呢？这里我们通过<code>react-router-config</code>来实现一个简单的路由守卫鉴权。</p>
+<h4 id="withRouter"><a href="#withRouter" class="headerlink" title="withRouter"></a>withRouter</h4><p>  首先了解一下withRouter，它的作用就是把不通过路由切换过来的组件中，将reac-router的history，location, match三个对象传入props对象上，这样就可以使用history下的方法和属性来编程式导航，具体参考<a href="https://reacttraining.com/react-router/web/api/history" target="_blank" rel="noopener">history</a>。</p>
+<p>  使用方法也很简单，只需要将组件用<code>withRouter()</code>执行一下就可以了</p>
+<pre><code class="javascript">  class App extends Component{
+    //此时才能获取this.props,包含（history, match, location）三个对象
+    console.log(this.props);  //输出{match: {…}, location: {…}, history: {…}, 等}
+    render(){return (&lt;div className=&#39;app&#39;&gt;
+            &lt;NavLink to=&#39;/one/users&#39;&gt;用户列表&lt;/NavLink&gt;
+            &lt;NavLink to=&#39;/one/companies&#39;&gt;公司列表&lt;/NavLink&gt;
+            &lt;Switch&gt;
+                &lt;Route path=&#39;/one/:type?&#39; component={One} /&gt;
+                &lt;Redirect from=&#39;/&#39; to=&#39;/one&#39; exact /&gt;
+                &lt;Route component={NotFound} /&gt;
+            &lt;/Switch&gt;
+        &lt;/div&gt;)
+    }
+  }
+  export default withRouter(App);</code></pre>
+<h4 id="路由守卫"><a href="#路由守卫" class="headerlink" title="路由守卫"></a>路由守卫</h4><p>  解决了编程式导航,那也就好解决路由守卫了。react-router的作者觉得组件化比较灵活<code>路由即组件</code>，崇尚去中心化，但我们的项目确实需要一个中心化的路由表便于维护。我们用到了<a href="https://www.npmjs.com/package/react-router-config" target="_blank" rel="noopener"><code>react-router-config</code></a>这个库，你可以像vue那样中心化配置路由。</p>
+<p>  同时，作者觉得路由守卫对于jsx语法有点多余，但我们确实需要一个守卫，所以我们需要包装一下组件，达到路由守卫的功能。</p>
+<p>  以下是一段很简单代码，你可以参考</p>
+<pre><code class="javascript">  // route.js
+  const routes = [
+      {
+        path: &#39;/customer-list&#39;,
+        component: CustomerList
+      },
+      {
+        path: &#39;/customer-detail/:id&#39;,
+        component: CustomerDetail,
+        auth: true
+      },
+  ]
+  // App.js
+  function App() {
+    // 匹配路由
+    const branch = matchRoutes(routes, props.location.pathname);
+    // 判断是否需要权限
+    const router = 
+    // 这里可以多点判断的
+      branch[branch.length - 1].route.auth ? 
+      &lt;Redirect to=&quot;/login&quot;&gt;&lt;/Redirect&gt; :
+      renderRoutes(routes)
+    return (
+      &lt;div className=&quot;App&quot;&gt;
+        {router}
+      &lt;/div&gt;
+    )
+  }</code></pre>
+<p>  总之，你只要将鉴权放在render-return之前即可</p>
+<h4 id="编程式导航"><a href="#编程式导航" class="headerlink" title="编程式导航"></a>编程式导航</h4><p>  props.history定义了很多方法，我们可以在此基础上进行编程式导航</p>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 395340017@qq.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a href="javascript:void(0)" class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>写给vuer的react项目搭建指南</p>
+    
+    <p><span class="copy-title">本文作者:</span><a href="javascript:void(0)" title="🔥烨烨🔥">🔥烨烨🔥</a></p>
+    <p><span class="copy-title">发布时间:</span>2019-09-02, 10:32:30</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-03, 10:24:24</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/archives/d36bc790/" title="写给vuer的react项目搭建指南">http://www.jiayechao.com/archives/d36bc790/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+    <div id="comments"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+<script type="text/javascript">
+    $.getScript('/js/gitalk.js', function () {
+        var gitalk = new Gitalk({
+            clientID: '6de61ce3b8d124c0ef9a',
+            clientSecret: '403109ca62c4495adaacb639e0a51ab05abd1471',
+            repo: 'blogTalk',
+            owner: 'jiayechao',
+            admin: ['jiayechao'],
+            id: decodeURI(location.pathname),
+            distractionFreeMode: 'true',
+            language: 'zh-CN',
+            perPage: parseInt('10',10)
+        })
+        gitalk.render('comments')
+    })
+</script>
+
+
+
+
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2016-2019 yeye</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" href="javascript:void(0)"></a>
+    </div>
+</div>
+<div class="acParent"></div>
+
+<div class="hide_box" onclick="dashangToggle()"></div>
+<div class="shang_box">
+    <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+    <div class="shang_tit">
+        <p>喜欢就点赞,疼爱就打赏</p>
+    </div>
+    <div class="shang_payimg">
+        <div class="pay_img">
+            <img src="/img/alipay.jpg" class="alipay" title="扫码支持">
+            <img src="/img/weixin.jpg" class="weixin" title="扫码支持">
+        </div>
+    </div>
+    <div class="shang_payselect">
+        <span><label><input type="radio" name="pay" checked value="alipay">支付宝</label></span><span><label><input type="radio" name="pay" value="weixin">微信</label></span>
+    </div>
+</div>
+
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['@🔥烨烨🔥','#leetcode','#vue','#vuepress','#node','#nestjs','#grapgql','#健身','#面试题','#mind','#css3','#scoped','#饿了么','#hexo','#模块','#闭包','#递归','#面试','#label','#双层循环','#工具','#input兼容','#input遮挡','#position','#事件循环','#eventloop','#react','#正则','#RegExp','#wiki','#webpack','#兼容','#重绘','#重排','#小技巧','#对象','#继承','#animation','#项目经验','#微前端','#数据结构','#npm','#js引擎',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+        $("input[name=pay]").on("click", function () {
+            if($("input[name=pay]:checked").val()=="weixin"){
+                $(".shang_box .shang_payimg .pay_img").addClass("weixin_img");
+            } else {
+                $(".shang_box .shang_payimg .pay_img").removeClass("weixin_img");
+            }
+        })
+        
+
+        /*高亮代码块行号*/
+        
+        $('pre code').each(function(){
+            var lines = $(this).text().split('\n').length - 1, widther='';
+            if (lines>99) {
+                widther = 'widther'
+            }
+            var $numbering = $('<ul/>').addClass('pre-numbering ' + widther).attr("unselectable","on");
+            $(this).addClass('has-numbering ' + widther)
+                    .parent()
+                    .append($numbering);
+            for(var i=1;i<=lines;i++){
+                $numbering.append($('<li/>').text(i));
+            }
+        });
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+    function dashangToggle() {
+        $(".shang_box").fadeToggle();
+        $(".hide_box").fadeToggle();
+    }
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<style>
+    pre{
+        position: relative;
+        margin-bottom: 24px;
+        border-radius: 10px;
+        border: 1px solid #e2dede;
+        background: #FFF;
+        overflow: hidden;
+    }
+    code.has-numbering{
+        margin-left: 30px;
+    }
+    code.has-numbering.widther{
+        margin-left: 35px;
+    }
+    .pre-numbering{
+        margin: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        padding: 0.5em 3px 0.7em 5px;
+        border-right: 1px solid #C3CCD0;
+        text-align: right;
+        color: #AAA;
+        background-color: #fafafa;
+    }
+    .pre-numbering.widther {
+        width: 35px;
+    }
+</style>
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        background: url("https://i.loli.net/2019/07/22/5d3521411f3f169375.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
